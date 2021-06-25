@@ -1,0 +1,45 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button
+      defaultHref="/"
+      text="Volver"
+      mode="ios">
+      </ion-back-button>
+    </ion-buttons>
+    <ion-title>Registro de usuarios</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card>
+    <ion-card-header>
+      <ion-card-subtitle>Ingrese los datos de registro</ion-card-subtitle>
+      <ion-card-title>Formulario registro de ursuarios</ion-card-title>
+    </ion-card-header>
+  
+    <ion-card-content>
+      <ion-item>
+        <ion-label position="floating">Ingrese su nombre</ion-label>
+        <ion-input type="text" name="nombre" [(ngModel)]="datos_registro.nombre" placeholder="Ej: Juán"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label position="floating">Ingrese su apellido</ion-label>
+        <ion-input type="text" name="apellido" [(ngModel)]="datos_registro.apellido" placeholder="Ej: Pérez"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label position="floating">Ingrese su RUN</ion-label>
+        <ion-input type="text" name="rut" [(ngModel)]="datos_registro.rut" placeholder="Ej: 66.666.666-6"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label position="floating">Ingrese su email</ion-label>
+        <ion-input type="text" name="correo" [(ngModel)]="datos_registro.correo" placeholder="Ej: ejemplo@ejemplo.cl"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label position="floating">Ingrese su contraseña</ion-label>
+        <ion-input type="text" name="password" [(ngModel)]="datos_registro.password" placeholder="Ej: Contraseña123"></ion-input>
+      </ion-item>
+      <ion-button (click)="enviardatos()" expand="full">Finalizar registro</ion-button>
+    </ion-card-content>
+  </ion-card>
+</ion-content>
